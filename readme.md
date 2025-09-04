@@ -14,3 +14,22 @@ In this module, you’ll learn essential data manipulation concepts in PostgreSQ
 ```
 select first_name,age,coalesce(email,'Not Provided')  as email from students
  ```
+ # 46-2 limit and offset
+ - limit
+ 
+ ```
+select * from students limit 3
+ ```
+ ```
+ select * from students where age in (20,21,23) limit 5
+ ```
+ - offset
+ ```
+ select * from students limit 5 offset 2 * 0
+ ```
+ ```
+ select * from students limit 5 offset 2 * 1
+ ```
+ ```
+ select * from students limit 5 offset 2 * 2
+ ```
