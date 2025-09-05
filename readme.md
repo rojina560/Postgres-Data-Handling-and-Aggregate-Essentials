@@ -78,3 +78,61 @@ select course,count(*) from students group by course having count(*) >4
 ```
 select country, avg(age) from students group by country having avg(age) > 21
 ```   
+# practice task 
+## Simple Queries
+- 1. select all users
+```
+select * from users
+```
+- 2. Show only first name and email
+```select first_name,email from users
+```
+-3.Find users older than 25
+```select * from users where age > 25
+```
+- 4.Count how many users are from each country
+select country, count(*) from users group by country
+-- 5. Find the youngest user’s age
+```select  min(age) from users
+```
+- 6 Find the oldest user’s age
+```
+select max(age) from users
+```
+- 7.Find the average age of all users
+```
+select avg(age) from users
+```
+- 8 List users ordered by age (youngest first)
+```
+select age from users order by age asc
+```
+
+## Add Some NULL Data for COALESCE Practice
+- Let’s say some users don’t have an email yet:
+```
+INSERT INTO users (first_name, last_name, age, country, email) VALUES
+('Imran', 'Haque', 26, 'Bangladesh', NULL),
+('Lina',  'Begum', 23, 'India', NULL);
+```
+# Queries with COALESCE
+- Show email, but if NULL → display "Not Provided"
+```select coalesce(email,'not provided')  as email from 
+users 
+```
+- Count users by country, replacing NULL country with "Unknown"
+```
+select coalesce(country,'unknown'),count(*) from users group by country 
+```
+# Queries with LIMIT & OFFSET
+- 1 Get the first 5 users
+```select * from users limit 5
+```
+- 2 Get the first 5 users
+```
+select * from users limit 5 offset 5*1
+```
+  - 3.Get the 3 youngest users
+  ```
+select * from users order by age asc limit 3
+```
