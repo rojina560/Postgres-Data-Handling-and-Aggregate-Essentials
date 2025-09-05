@@ -85,17 +85,20 @@ select country, avg(age) from students group by country having avg(age) > 21
 select * from users
 ```
 - 2 . Show only first name and email
-```select first_name,email from users
+```
+select first_name,email from users
 ```
 - 3.Find users older than 25
-```select * from users where age > 25
+```
+select * from users where age > 25
 ```
 - 4.Count how many users are from each country
 ```
 select country, count(*) from users group by country
 ```
 - 5 . Find the youngest user’s age
-```select  min(age) from users
+```
+select  min(age) from users
 ```
 - 6 Find the oldest user’s age
 ```
@@ -119,7 +122,8 @@ INSERT INTO users (first_name, last_name, age, country, email) VALUES
 ```
 # Queries with COALESCE
 - Show email, but if NULL → display "Not Provided"
-```select coalesce(email,'not provided')  as email from 
+```
+select coalesce(email,'not provided')  as email from 
 users 
 ```
 - Count users by country, replacing NULL country with "Unknown"
@@ -128,7 +132,9 @@ select coalesce(country,'unknown'),count(*) from users group by country
 ```
 # Queries with LIMIT & OFFSET
 - 1 Get the first 5 users
-```select * from users limit 5
+```
+select * from users limit 5
+
 ```
 - 2 Get the first 5 users
 ```
