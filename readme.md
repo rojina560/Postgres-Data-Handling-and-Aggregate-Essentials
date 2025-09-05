@@ -87,12 +87,14 @@ select * from users
 - 2. Show only first name and email
 ```select first_name,email from users
 ```
--3.Find users older than 25
+- 3.Find users older than 25
 ```select * from users where age > 25
 ```
 - 4.Count how many users are from each country
+```
 select country, count(*) from users group by country
--- 5. Find the youngest user’s age
+```
+- 5. Find the youngest user’s age
 ```select  min(age) from users
 ```
 - 6 Find the oldest user’s age
