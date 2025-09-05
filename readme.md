@@ -45,3 +45,13 @@ where student_id = 2
  ``` 
 update students set grade = 'B' where student_id in (1,2)
  ```
+ # 46-4 Delete Data
+ - If we delete data like this  entire table will be delete so need add a specific condition like which data we can be delete 
+ ```
+ delete from  students
+ ```
+ 
+ ```
+delete from students where age > 20 and grade = 'A'
+
+ ```
