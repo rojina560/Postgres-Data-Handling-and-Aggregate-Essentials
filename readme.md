@@ -68,4 +68,13 @@ delete from students where age > 20 and grade = 'A'
   ```
   select grade, count(*) from students group by grade
   ```
-
+  ![alt text](group%20by.png)
+# 46-6 group by having 
+  - courses with more than 4 students 
+ ``` 
+select course,count(*) from students group by course having count(*) >4
+```
+  - country where avarage student age is greater than 21
+```
+select country, avg(age) from students group by country having avg(age) > 21
+```   
