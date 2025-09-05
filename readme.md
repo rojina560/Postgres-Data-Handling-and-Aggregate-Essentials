@@ -55,3 +55,17 @@ update students set grade = 'B' where student_id in (1,2)
 delete from students where age > 20 and grade = 'A'
 
  ```
+ # 46-5 group by 
+ - count avarage age group by country
+ ```
+ select country, avg(age) from students group by country
+ ```
+ - count students by country
+ ```
+  select country, count(*) from students group by country
+  ```
+   - count students by grade 
+  ```
+  select grade, count(*) from students group by grade
+  ```
+
