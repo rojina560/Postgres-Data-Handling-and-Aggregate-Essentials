@@ -33,3 +33,15 @@ select * from students limit 3
  ```
  select * from students limit 5 offset 2 * 2
  ```
+# 46-3 updating data
+- If we want update  whole table we can update like this..but its not a right way to update we need add a condition for a specific row or multiple row 
+ ``` 
+ update  students set email = 'defualt@gmail.com'
+ ```
+ ``` 
+update students set first_name = 'Ronjina',age=26
+where student_id = 2
+ ```
+ ``` 
+update students set grade = 'B' where student_id in (1,2)
+ ```
