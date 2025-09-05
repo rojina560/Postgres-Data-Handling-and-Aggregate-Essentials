@@ -80,11 +80,11 @@ select country, avg(age) from students group by country having avg(age) > 21
 ```   
 # practice task 
 ## Simple Queries
-- 1. select all users
+- 1 . select all users
 ```
 select * from users
 ```
-- 2. Show only first name and email
+- 2 . Show only first name and email
 ```select first_name,email from users
 ```
 - 3.Find users older than 25
@@ -94,7 +94,7 @@ select * from users
 ```
 select country, count(*) from users group by country
 ```
-- 5. Find the youngest user’s age
+- 5 . Find the youngest user’s age
 ```select  min(age) from users
 ```
 - 6 Find the oldest user’s age
